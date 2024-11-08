@@ -1,4 +1,20 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect } from "react"
+
+import { useCourse } from "../contexts/CourseContext"
+import { useLife } from "../contexts/LifeContext"
+
 const Credits = () => {
+  const { gameClear } = useCourse()
+  const { restoreLife } = useLife()
+
+  // Verifica se o usuário já finalizou o jogo
+  useEffect(() => {
+    if (gameClear) {
+      restoreLife()
+    }
+  }, [gameClear])
+
   return (
     <div className="flex flex-col items-center space-y-3">
       <h1 className="text-3xl font-semibold">Créditos</h1>

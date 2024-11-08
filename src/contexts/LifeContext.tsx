@@ -47,7 +47,6 @@ export function LifeProvider({ children }: LifeProviderProps) {
   // Restaurar a vida e retornar ao início do jogo
   function restoreLife() {
     setLife(3)
-    navigate("/game") // TODO: colocar isso em outro lugar
   }
 
   return (

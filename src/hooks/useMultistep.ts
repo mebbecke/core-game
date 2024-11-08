@@ -1,9 +1,12 @@
 import { ReactElement, useState } from "react"
+
 import { useCourse } from "../contexts/CourseContext"
 
 export const useMultistep = (steps: ReactElement[]) => {
   const [currentStepIndex, setCurrentStepIndex] = useState(0)
   const { setCourseClear } = useCourse()
+
+  // TODO: Implement sessionStorage to save user progress
 
   const nextStep = () => {
     setCurrentStepIndex((prev) => prev + 1)

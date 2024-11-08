@@ -2,11 +2,12 @@ import { useEffect } from "react"
 import { useCourse } from "../../contexts/CourseContext"
 
 const CourseFinal = () => {
-  const { setCourseClear } = useCourse()
+  const { setCourseClear, setGameClear } = useCourse()
 
   useEffect(() => {
     setCourseClear(true)
-  }, [setCourseClear])
+    setGameClear(true)
+  })
 
   return (
     <div className="space-y-3 text-center">

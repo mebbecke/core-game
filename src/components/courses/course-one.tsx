@@ -27,8 +27,6 @@ const CourseOne = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [name, isNameCorrect, nameIsWrong])
 
-  console.log("name", name)
-
   return (
     <div className="space-y-3 text-center">
       <div className="text-center">

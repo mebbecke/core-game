@@ -4,6 +4,8 @@ import React, { createContext, useContext, useState } from "react"
 interface CourseContextProps {
   courseClear: boolean
   setCourseClear: React.Dispatch<React.SetStateAction<boolean>>
+  gameClear: boolean
+  setGameClear: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export const CourseContext = createContext<CourseContextProps>(
@@ -16,9 +18,12 @@ interface CourseProviderProps {
 
 export function CourseProvider({ children }: CourseProviderProps) {
   const [courseClear, setCourseClear] = useState(false)
+  const [gameClear, setGameClear] = useState(false)
 
   return (
-    <CourseContext.Provider value={{ courseClear, setCourseClear }}>
+    <CourseContext.Provider
+      value={{ courseClear, setCourseClear, gameClear, setGameClear }}
+    >
       {children}
     </CourseContext.Provider>
   )
