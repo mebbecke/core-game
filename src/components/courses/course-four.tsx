@@ -34,7 +34,7 @@ const CourseFour = () => {
   return (
     <div className="space-y-3 text-center">
       <div className="text-center">
-        <h1 className="text-3xl font-semibold">Fase 3</h1>
+        <h1 className="text-3xl font-semibold">Fase 4</h1>
         <p>Falando em jogos...</p>
       </div>
 

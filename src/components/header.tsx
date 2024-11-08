@@ -8,10 +8,14 @@ const Header = () => {
   return (
     <header className="flex flex-row w-full items-center justify-between px-10 py-5">
       <nav>
-        <ul className="flex flex-row">
-          <a href="/">
-            <li className="hover:font-semibold hover:text-blue-500">Início</li>
-          </a>
+        <ul className="flex flex-row gap-3">
+          <li className="hover:text-blue-500">
+            <a href="/">início</a>
+          </li>
+          .
+          <li className="hover:text-blue-500">
+            <a href="/credits">créditos</a>
+          </li>
         </ul>
       </nav>
 
