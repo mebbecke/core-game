@@ -39,7 +39,7 @@ const Home = () => {
 
       {answer === "no" && (
         <div className="flex flex-col items-center justify-center mt-6">
-          <p>Vsf então... </p>
+          <p>vsf então... </p>
           <img
             src="/images/gameover.jpg"
             height={500}
@@ -47,7 +47,7 @@ const Home = () => {
             alt="Uma bela garota chateada"
           />
           <h2 className="tracking-widest font-medium">GAME OVER</h2>
-          <p>tente novamente</p>
+          <p>eu sabia que você ia clicar só pra ver o que acontecia :P</p>
         </div>
       )}
     </div>

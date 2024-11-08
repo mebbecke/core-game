@@ -41,26 +41,23 @@ const CourseTwo = () => {
         Quantas vezes nós fomos no Daisho comer sushi e ser felizes?
       </h2>
 
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col items-center gap-2"
-      >
-        <div className="flex gap-3">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+        <div className="flex flex-col gap-3">
           <div className="flex gap-2">
             <input type="radio" id="2" name="visitas-daisho" value={2} />
-            <label htmlFor="2">2</label>
+            <label htmlFor="2">2 vezes</label>
           </div>
           <div className="flex gap-2">
-            <input type="radio" id="2" name="visitas-daisho" value={3} />
-            <label htmlFor="2">3</label>
+            <input type="radio" id="3" name="visitas-daisho" value={3} />
+            <label htmlFor="3">3 vezes</label>
           </div>
           <div className="flex gap-2">
-            <input type="radio" id="2" name="visitas-daisho" value={4} />
-            <label htmlFor="2">4</label>
+            <input type="radio" id="4" name="visitas-daisho" value={4} />
+            <label htmlFor="4">4 vezes</label>
           </div>
           <div className="flex gap-2">
-            <input type="radio" id="2" name="visitas-daisho" value={5} />
-            <label htmlFor="2">5</label>
+            <input type="radio" id="5" name="visitas-daisho" value={5} />
+            <label htmlFor="5">5 vezes</label>
           </div>
         </div>
 

@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
-import Button from "../button"
+
 import { useCourse } from "../../contexts/CourseContext"
 import { useLife } from "../../contexts/LifeContext"
+import Button from "../button"
 
-const CourseThree = () => {
+const CourseFour = () => {
   const [answer, setAnswer] = useState<string | null>(null)
-  const isAnswerCorrect = answer === "GTAV"
+  const isAnswerCorrect = answer === "FANE"
   const wrongAnswer = answer && !isAnswerCorrect
   const { setCourseClear } = useCourse()
   const { decreaseLife } = useLife()
@@ -14,7 +15,7 @@ const CourseThree = () => {
     e.preventDefault()
     const inputAnswer = (
       e.currentTarget.querySelector(
-        "input[name=primeiro-jogo]:checked"
+        "input[name=ptzinha]:checked"
       ) as HTMLInputElement
     ).value
 
@@ -34,45 +35,35 @@ const CourseThree = () => {
     <div className="space-y-3 text-center">
       <div className="text-center">
         <h1 className="text-3xl font-semibold">Fase 3</h1>
-        <p>Vamos para mais uma pergunta.</p>
+        <p>Falando em jogos...</p>
       </div>
 
       <h2 className="text-xl font-semibold">
-        Qual foi o primeiro jogo que jogamos juntos?
+        Quem foi o primeiro membro da mundialmente famosa Ptzinha do Crime?
       </h2>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-2">
         <div className="flex flex-col gap-3">
           <div className="flex gap-2">
-            <input
-              type="radio"
-              id="portal2"
-              name="primeiro-jogo"
-              value={"PORTAL2"}
-            />
-            <label htmlFor="portal2">Portal 2</label>
+            <input type="radio" id="rique" name="ptzinha" value={"RIQUE"} />
+            <label htmlFor="rique">Rique</label>
+          </div>
+          <div className="flex gap-2">
+            <input type="radio" id="fane" name="ptzinha" value={"FANE"} />
+            <label htmlFor="fane">Fane</label>
           </div>
           <div className="flex gap-2">
             <input
               type="radio"
-              id="borderlands2"
-              name="primeiro-jogo"
-              value={"BORDERLANDS2"}
+              id="rafaplutaum"
+              name="ptzinha"
+              value={"RAFAPLUTAUM"}
             />
-            <label htmlFor="borderlands2">Borderlands 2</label>
+            <label htmlFor="rafaplutaum">Rafa Plutaum</label>
           </div>
           <div className="flex gap-2">
-            <input
-              type="radio"
-              id="paladins"
-              name="primeiro-jogo"
-              value={"PALADINS"}
-            />
-            <label htmlFor="paladins">Paladins</label>
-          </div>
-          <div className="flex gap-2">
-            <input type="radio" id="gtav" name="primeiro-jogo" value={"GTAV"} />
-            <label htmlFor="gtav">GTA V</label>
+            <input type="radio" id="ridou" name="ptzinha" value={"RIDOU"} />
+            <label htmlFor="ridou">Ridou</label>
           </div>
         </div>
 
@@ -84,15 +75,10 @@ const CourseThree = () => {
       {answer &&
         (isAnswerCorrect ? (
           <div className="flex flex-col text-center space-y-2 items-center">
-            <p>Boa! O primeiro jogo que jogamos juntos foi GTA V Online!</p>
-            <p>Depois disso foi só ladeira abaixo rs</p>
+            <p>Acertou kkkk, a primeira pessoa a entrar foi a Fane.</p>
+            <p>Depois disso, também foi só ladeira abaixo rs</p>
             <div className="flex items-center">
-              <img
-                src="/images/gtav.png"
-                alt="Capa do GTA V"
-                height={500}
-                width={200}
-              />
+              <img src="/images/omg.png" alt="" height={500} width={200} />
             </div>
           </div>
         ) : (
@@ -102,4 +88,4 @@ const CourseThree = () => {
   )
 }
 
-export default CourseThree
+export default CourseFour
