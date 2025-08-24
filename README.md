@@ -2,6 +2,13 @@
 
 Jogo simples de desafios feito para comemorar o aniversário de namoro de Marina e Gabriel.
 
+Cada fase consiste em perguntas sobre piadas internas, apelidos e acontecimentos do relacionamento. Para jogar e ver como são as fases sem ter que nos conhecer profundamente, aqui vão as respostas:
+- Corinho
+- 4 vezes
+- GTA V
+- Fane
+- Imagem com lulas empanadas e um livro
+
 ## Tecnologias usadas
 
 - TypeScript
